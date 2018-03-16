@@ -1,7 +1,7 @@
 //最经典的快速排序的实现
 function quickSort(arr,start,end){
     if((end-start) <= 1){
-        return arr;
+        return console.log(arr);
     }
     else{
         var left = start;
@@ -27,9 +27,9 @@ function quickSort(arr,start,end){
         }
         arr[center] = arr[right];
         arr[right] = pivot;
-        console.log(arr,'left='+left,'right='+right,start,end);
-        quickSort(arr,0,right-1);
-        quickSort(arr,right+1,arr.length-1);
+        // console.log(arr,'left='+left,'right='+right,start,end);
+        quickSort(arr,start,right-1);
+        quickSort(arr,right+1,end);
     }
 }
 var arr1 = [4,1,2,6,3,2,7];
